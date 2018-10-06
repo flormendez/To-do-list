@@ -4,13 +4,15 @@
 
 .columna2 {
   margin-top: 10%;
-  background-color: #faf9f9;
+  
   height: 80%;
+  border-radius: 15px;
 }
 
 .general {
   background-color: #414c53;
-  margin-top: 10%;
+  margin-top: 7%;
+  border-radius: 15px;
 }
 
 .button {
@@ -37,8 +39,8 @@
 }
 
 li.selected {
-  color: green;
-  border-bottom: solid 1px green;
+  background-color: #a8f7ae;
+  border-bottom: solid 1px #a8f7ae;
 }
 
 h1 {
@@ -52,14 +54,22 @@ h1 {
   background-color: #de9f97;
   padding-top: 3%;
   padding-bottom: 3%;
+  border-radius: 15px;
+  margin-bottom:5%;
 }
 
 ul {
   list-style-type: circle;
+  height:100%
 }
 
+.lista{
+  background-color: #faf9f9;
+  height:80%;
+  border-radius: 15px;
+}
 li {
   color: #414c53;
   font-size: 18px;
-  border-bottom: solid black 1px;
+  border-bottom: solid #414c53 1px;
 }
