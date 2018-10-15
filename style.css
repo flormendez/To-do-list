@@ -1,3 +1,4 @@
+
 .columna1 {
   margin-top: 60%;
 }
@@ -10,9 +11,9 @@
 }
 
 .general {
-  background-color: #414c53;
+  background-color: #3962FF;
   margin-top: 7%;
-  border-radius: 15px;
+  border-radius: 25px;
 }
 
 .delete {
@@ -25,6 +26,16 @@
   border: none;
   display: inline;
 }
+
+.check{
+  margin-right:30%;
+  font-size: 14px;
+  cursor: pointer;
+   background-color: #414c53;
+  border: none;
+  display: inline;
+}
+
 .button {
   padding: 15px 25px;
   font-size: 20px;
@@ -32,18 +43,18 @@
   text-align: center;
   text-decoration: none;
   outline: none;
-  color: #faf9f9;
-  background-color: #de9f97;
+  color: #00075C;
+  background-color: #FFE59B;
   border: none;
-  border-radius: 15px;
+  border-radius: 35px;
 }
 
 .button:hover {
-  background-color: #dec0b2;
+  background-color: #E3CE7B;
 }
 
 .button:active {
-  background-color: #dec0b2;
+  background-color: #E3CE7B;
   box-shadow: 0 5px #666;
   transform: translateY(4px);
 }
@@ -56,16 +67,17 @@ li.selected {
 h1 {
   font-size: 26px;
   font-family: Arial, Helvetica, sans-serif;
-  color: #faf9f9;
+  color: #00075C;
   padding-left: 20%;
 }
 
 .title {
-  background-color: #de9f97;
+  background-color: #FFE59B;
   padding-top: 3%;
   padding-bottom: 3%;
-  border-radius: 15px;
+  border-radius: 35px;
   margin-bottom: 5%;
+
 }
 
 ul {
@@ -74,7 +86,7 @@ ul {
 }
 
 .lista {
-  background-color: #faf9f9;
+  background-color: #F7F7E9;
   height: 80%;
   border-radius: 15px;
 }
