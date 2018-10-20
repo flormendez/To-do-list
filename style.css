@@ -1,23 +1,24 @@
-
 .columna1 {
-  margin-top: 60%;
+  margin-top: 80%;
+  padding-top:100%;
 }
 
 .columna2 {
   margin-top: 10%;
-
+  margin-bottom: 50%;
+  margin-left:20%;
   height: 80%;
   border-radius: 15px;
 }
 
 .general {
-  background-color: #3962FF;
+  background-color: #b0caf4;
   margin-top: 7%;
   border-radius: 25px;
 }
 
 .delete {
-  margin-left:50%;
+  margin-left: 50%;
   color: white;
   text-align: center;
   font-size: 14px;
@@ -27,11 +28,11 @@
   display: inline;
 }
 
-.check{
-  margin-right:30%;
+.check {
+  margin-right: 30%;
   font-size: 14px;
   cursor: pointer;
-   background-color: #414c53;
+  background-color: #414c53;
   border: none;
   display: inline;
 }
@@ -43,18 +44,18 @@
   text-align: center;
   text-decoration: none;
   outline: none;
-  color: #00075C;
-  background-color: #FFE59B;
+  color: #00075c;
+  background-color: #d9dce0;
   border: none;
   border-radius: 35px;
 }
 
 .button:hover {
-  background-color: #E3CE7B;
+  background-color: #7f8691;
 }
 
 .button:active {
-  background-color: #E3CE7B;
+  background-color: #d9dce0;
   box-shadow: 0 5px #666;
   transform: translateY(4px);
 }
@@ -67,27 +68,20 @@ li.selected {
 h1 {
   font-size: 26px;
   font-family: Arial, Helvetica, sans-serif;
-  color: #00075C;
+  color: #00075c;
   padding-left: 20%;
 }
 
-.title {
-  background-color: #FFE59B;
-  padding-top: 3%;
-  padding-bottom: 3%;
-  border-radius: 35px;
-  margin-bottom: 5%;
 
-}
 
 ul {
-  list-style-type: circle;
+  list-style-type: none;
   height: 100%;
 }
 
 .lista {
-  background-color: #F7F7E9;
-  height: 80%;
+  background-color: #d9dce0;
+  height: 70%;
   border-radius: 15px;
 }
 li {

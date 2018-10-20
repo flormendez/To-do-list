@@ -2,8 +2,8 @@ var tareasPorHacer = [];
 
 var marcarImportante = false;
 var marcarTerminado=false;
+var editarItemTarea = false; 
 
-//Botón agregar tareas y botón eliminar específico para cada tarea
 $(document).ready(function() {
 
 //Botón agregar tareas y botón eliminar específico para cada tarea
@@ -11,11 +11,13 @@ $(document).ready(function() {
     nuevoSelected = true;
     var tarea = prompt("Agrega nueva tarea");
     tareasPorHacer.push(tarea);
-    $("#tareas-por-hacer").append("<li></li>");
+    $("#tareas-por-hacer").append("<li><input type='checkbox'/></li>");
     $("#tareas-por-hacer li:last-child").append(tarea);
     $("#tareas-por-hacer li:last-child").append(
-      "<button class='delete'>X</button>"
-    );
+      "<button class='delete'>X</button>");
+      //$("#tareas-por-hacer li:last-child").append(
+        //"<button id='importante' class='button' >'<i class='fas fa-plus-circle'>'</i></button>
+    //);
     nuevoSelected = false;
   });
 
@@ -26,12 +28,14 @@ $(document).ready(function() {
       .remove();
   });
 
+  //Botón imporante 
   $("#importante").click(function() {
     marcarImportante = true;
   });
 
   $(document).on("click", "#tareas-por-hacer li", function() {
     if (marcarImportante) {
+      //resalta
       $(this).addClass("selected");
       //Ordena el <li> importante primero en la lista
       $(this)
@@ -40,16 +44,6 @@ $(document).ready(function() {
       marcarImportante = false;
     }
   });
-
-
-
-
-//Creo checkboxes y los oculto para mostrarlos cuando se presione el botón "tara terminada"
- var checkBox = (document).on("click", "#tareas-por-hacer li:last-child", function(){
-  '<input class="check" type="checkbox">'
-}
-);
-$checkBox.hide();
 
 //Botón eliminar item
 $("#terminado").click(function() {
@@ -60,24 +54,33 @@ $("#terminado").click(function() {
 
 //Botón para editar tarea
 $("#editar").click(function() {
-  var $li = $("#tareas-por-hacer li").click(function(e) {
-    $(this).remove();
-    var editarTarea = prompt("Edita tu tarea");
-    tareasPorHacer.push(editarTarea);
-    $("#tareas-por-hacer").append("<li></li>");
-    $("#tareas-por-hacer li:last-child").append(editarTarea);
-    $("#tareas-por-hacer li:last-child").append(
-      "<button class='delete'>X</button>"
-    );
-
-    $(".delete").click(function(e) {
-      $(this)
-        .parent()
-        .remove();
-    });
+    editarItemTarea = true;
   });
-});
 
+  $(document).on("click", "#tareas-por-hacer li", function() {
+    if (editarItemTarea) {
+          $(this).remove();
+          var editarTarea = prompt("Edita tu tarea");
+          tareasPorHacer.push(editarTarea);
+          $("#tareas-por-hacer").append("<li><input type='checkbox'/></li>");
+          $("#tareas-por-hacer li:last-child").append(editarTarea);
+          $("#tareas-por-hacer li:last-child").append(
+            "<button class='delete'>X</button>"
+          );
+          
+    };
+    editarItemTarea=false;
+  });
+   
+    
+  
+  //Agrega botón delete en cada li de nueva tarea
+  $(document).on("click", ".delete", function() {
+    $(this)
+      .parent()
+      .remove();
+  });
+  /*
 //Botón tarea terminada
 $("#tareaLista").click(function() {
   marcarTerminado=false;
@@ -86,7 +89,7 @@ $("#tareaLista").click(function() {
   $("#tareas-por-hacer li").click(function(e) {
     $checkBox.show();
   });
-
+*/
 
 /*$("#tareaLista").click(function(){
     var $li = $("#tareas-por-hacer li").click(function(e) {

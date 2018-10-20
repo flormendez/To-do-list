@@ -11,6 +11,8 @@
         crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz"
+        crossorigin="anonymous">
     <script src="js/jquery-3.1.1.js"></script>
     <script src="js/jquery-ui.js"></script>
     <script src="js/todolist.js"></script>
@@ -18,49 +20,22 @@
 </head>
 
 <body>
-    <div class="col-10 container general">
+    <div class="col-8 container general">
         <div class="row content-row">
 
-            <div class="col-3">
-                <div class="columna1">
 
-
-                    <button id="nuevo" class="button">Nuevo item</button>
-                </div>
-
-                </br>
-
-
-                <button id="importante" class="button">Marcar como importante</button>
-
-
-                </br>
-                </br>
-
-                <button id="terminado" class="button">Eliminar item</button>
-
-
-                </br>
-                </br>
-
-                <button id="editar" class="button">Editar tarea</button>
-                </br>
-                </br>
-
-                <button id="tareaLista" class="button">Tarea terminada</button>
-                </br>
-                </br>
-            </div>
 
             <div class="col-7">
                 <div class="columna2">
-                    <div class="title">
-                        <h1>Tareas por hacer </h1>
-                    </div>
+
+                    <h1>To do list </h1>
+                    </br>
+                    </br>
+
                     <div class="lista">
 
                         <ul id="tareas-por-hacer">
-                                
+
                         </ul>
                     </div>
 
@@ -69,6 +44,42 @@
                 </div>
             </div>
 
+            <div class="col-1">
+                <div class="columna1">
+
+
+                    <button id="nuevo" class="button">
+                        <i class="fas fa-plus-circle"></i>
+                    </button>
+
+
+                    </br>
+                    </br>
+
+                    <button id="importante" class="button">
+                        <i class="fas fa-star"></i>
+                    </button>
+
+
+                    </br>
+                    </br>
+
+                    <button id="terminado" class="button">
+                        <i class="fas fa-trash"></i>
+                    </button>
+
+
+                    </br>
+                    </br>
+
+                    <button id="editar" class="button">
+                        <i class="fas fa-edit"></i>
+                    </button>
+                    </br>
+                    </br>
+                </div>
+            </div>
+            
         </div>
 
 
