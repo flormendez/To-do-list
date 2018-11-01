@@ -10,7 +10,6 @@ function controlarDatos(dato) {
 }
 
 $(document).ready(function() {
-
   //Botón agregar tareas
   $("#nuevo").click(function() {
     var tarea = prompt("Agrega nueva tarea");
@@ -30,7 +29,7 @@ $(document).ready(function() {
     $("#tareas-por-hacer").prepend($(this).parent());
   });
 
-  //Boton Edit
+  //Boton edit
   $(document).on("click", "#edit", function() {
     $(this)
       .parent()
@@ -38,13 +37,13 @@ $(document).ready(function() {
     editarTareas();
   });
 
-  //Agrega botón delete en cada li de nueva tarea
+  //Boton delete
   $(document).on("click", "#delete", function() {
     $(this)
       .parent()
       .remove();
   });
-});
+}); //Acá cierra el document ready
 
 function agregarTareas(tarea) {
   //nuevoSelected = true;
@@ -71,9 +70,11 @@ function agregarTareas(tarea) {
 function editarTareas() {
   var editarTarea = prompt("Edita tu tarea");
   tareasPorHacer.push(editarTarea);
-agregarTareas(editarTarea)
+  agregarTareas(editarTarea);
 }
 
+
+//Cosas que faltan: 
 //agregar si esta completo a otra lista nueva
 //guardar
 //template
