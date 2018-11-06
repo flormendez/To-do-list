@@ -1,15 +1,20 @@
-var tareasPorHacer = [];
-
+var listaToDos = [];
 var marcarImportante = false;
 var marcarTerminado = false;
 var editarItemTarea = false;
 
-function controlarDatos(dato) {
-  console.log("controlando dato");
-  return dato != "" && dato != null;
-}
-
 $(document).ready(function() {
+  function obtenerLocalStorage() {
+    var listaString2 = localStorage.getItem("lista");
+
+    for (var i = 1; i <= listaToDos; i++) {
+      console.log(listaToDos[i]);
+      listaToDos = JSON.parse(listaString2);
+    }
+  }
+
+  obtenerLocalStorage();
+
   //Botón agregar tareas
   $("#nuevo").click(function() {
     var tarea = prompt("Agrega nueva tarea");
@@ -31,10 +36,13 @@ $(document).ready(function() {
 
   //Boton edit
   $(document).on("click", "#edit", function() {
+    var editarTarea = prompt("Edita tu tarea");
+    if (controlarDatos(editarTarea)) {
+      agregarTareas(editarTarea);
+    }
     $(this)
       .parent()
       .remove();
-    editarTareas();
   });
 
   //Boton delete
@@ -48,7 +56,7 @@ $(document).ready(function() {
 function agregarTareas(tarea) {
   //nuevoSelected = true;
   console.log(tarea);
-  tareasPorHacer.push(tarea);
+  listaToDos.push({ tarea });
   $("#tareas-por-hacer").append(
     "<li class='list-item' title='" + tarea + "'><input type='checkbox'/></li>"
   );
@@ -64,17 +72,21 @@ function agregarTareas(tarea) {
     "<button id='edit' class='button button-list'> <i class='fas fa-edit'></i></button>"
   );
   //nuevoSelected = false;
+  guardarLista();
 }
 
-//Botón para editar tarea
-function editarTareas() {
-  var editarTarea = prompt("Edita tu tarea");
-  tareasPorHacer.push(editarTarea);
-  agregarTareas(editarTarea);
+function controlarDatos(dato) {
+  console.log("controlando dato");
+  return dato != "" && dato != null;
 }
 
+function guardarLista() {
+  var listaString = JSON.stringify(listaToDos);
 
-//Cosas que faltan: 
+  localStorage.setItem("lista", listaString);
+}
+
+//Cosas que faltan:
 //agregar si esta completo a otra lista nueva
 //guardar
 //template
